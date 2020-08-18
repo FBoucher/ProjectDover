@@ -70,7 +70,9 @@ namespace ProjectDover
                 LoadMap();
             }
             else{
-                var jsonRooms = File.ReadAllText(@".\data\BradysHouse\rooms.json");
+                //var jsonRooms = File.ReadAllText(@".\data\BradysHouse\rooms.json");
+                var jsonRooms = File.ReadAllText(@".\data\CollinsHouse\rooms.json");
+                
                 Rooms = JsonSerializer.Deserialize<List<Room>>(jsonRooms);
             }
         }
@@ -119,6 +121,12 @@ namespace ProjectDover
                     break;
                 case Command.COMMAND_WEST:
                     indexOfExit = GetExitFromDirection(Direction.West);
+                    break;
+                case Command.COMMAND_UP:
+                    indexOfExit = GetExitFromDirection(Direction.Up);
+                    break;
+                case Command.COMMAND_DOWN:
+                    indexOfExit = GetExitFromDirection(Direction.Down);
                     break;
             }
 

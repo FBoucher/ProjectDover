@@ -43,6 +43,16 @@ namespace ProjectDover
             {
                 return Command.COMMAND_WEST;
             }
+            if (commandText.Equals("UP", StringComparison.OrdinalIgnoreCase)
+                || commandText.Equals("U", StringComparison.OrdinalIgnoreCase))
+            {
+                return Command.COMMAND_UP;
+            }
+            if (commandText.Equals("DOWN", StringComparison.OrdinalIgnoreCase)
+                || commandText.Equals("D", StringComparison.OrdinalIgnoreCase))
+            {
+                return Command.COMMAND_DOWN;
+            }
             if (commandText.Equals("INVENTORY", StringComparison.OrdinalIgnoreCase)
                 || commandText.Equals("I", StringComparison.OrdinalIgnoreCase))
             {

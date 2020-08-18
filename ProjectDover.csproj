@@ -13,4 +13,13 @@
     <PackageReference Include="MongoDB.Driver" Version="2.9.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="data\BradysHouse\rooms.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="data\CollinsHouse\rooms.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,173 @@
+[
+    {
+        "Id": "0",
+        "Name": "Outside Collins\u0027s House",
+        "Description": "If you are close this house, you will feel chilly. There is just the house and no sign of people.",
+        "PotentialDescription": null,
+        "Exits": [
+            {
+                "Direction": 0,
+                "TargetRoomId": "1",
+                "Lockable": false,
+                "IsLocked": false
+            },
+            {
+                "Direction": 1,
+                "TargetRoomId": "2",
+                "Lockable": false,
+                "IsLocked": false
+            }
+        ],
+        "Inventory": null,
+        "HasSeenDescription": false
+    },
+    {
+        "Id": "1",
+        "Name": "Collins\u0027s House's garden",
+        "Description": "There are some roses.",
+        "PotentialDescription": null,
+        "Exits": [
+            {
+                "Direction": 1,
+                "TargetRoomId": "0",
+                "Lockable": false,
+                "IsLocked": false
+            }
+        ],
+        "Inventory": {
+            "Name": "Trees in the garden",
+            "Items": [
+                {
+                    "Id": 0,
+                    "Name": "Apple",
+                    "Description": "Red eatable apple.",
+                    "HasSeenDescription": false,
+                    "Triggers": {
+                        "take": "noApple"
+                    },
+                    "KeyEvents": {
+                        "take": "You found an apple."
+                    }
+                },
+                {
+                    "Id": 0,
+                    "Name": "Rose",
+                    "Description": "Beautiful fragrant one",
+                    "HasSeenDescription": false,
+                    "Triggers": {
+                        "take": "noRose"
+                    },
+                    "KeyEvents": {
+                        "take": "You found a rose."
+                    }
+                }
+            ]
+        },
+        "HasSeenDescription": false
+    },
+    {
+        "Id": "2",
+        "Name": "Inside Collins\u0027s House",
+        "Description": "The inside is just nicer than the outside. There are silent rooms and the upstairs.",
+        "PotentialDescription": null,
+        "Exits": [
+            {
+                "Direction": 1,
+                "TargetRoomId": "0",
+                "Lockable": false,
+                "IsLocked": false
+            },
+            {
+                "Direction": 2,
+                "TargetRoomId": "3",
+                "Lockable": false,
+                "IsLocked": false
+            },
+            {
+                "Direction": 3,
+                "TargetRoomId": "4",
+                "Lockable": false,
+                "IsLocked": false
+            },
+            {
+                "Direction": 4,
+                "TargetRoomId": "5",
+                "Lockable": false,
+                "IsLocked": false
+            }
+
+        ],
+        "Inventory": null,
+        "HasSeenDescription": false
+    },
+    {
+        "Id": "3",
+        "Name": "Living Room",
+        "Description": "Nice cozy living room. There is a gigantic TV and a low and long table.",
+        "PotentialDescription": {
+            "noFlashlight": "Because there is no light, you cannot see anything."
+        },
+        "Exits": [
+            {
+                "Direction": 3,
+                "TargetRoomId": "2",
+                "Lockable": false,
+                "IsLocked": false
+            }
+        ],
+        "Inventory": {
+            "Name": "Living Room",
+            "Items": [
+                {
+                    "Id": 0,
+                    "Name": "Gigantic TV",
+                    "Description": "Massive gigantic TV.",
+                    "HasSeenDescription": false,
+                    "Triggers": null,
+                    "KeyEvents": null
+                },
+                {
+                    "Id": 0,
+                    "Name": "a low long table",
+                    "Description": "It is too long to see the entire.",
+                    "HasSeenDescription": false,
+                    "Triggers": null,
+                    "KeyEvents": null
+                }
+            ]
+        },
+        "HasSeenDescription": false
+    },
+    {
+        "Id": "4",
+        "Name": "Master Bedroom",
+        "Description": "Nice luxurious bedroom. The perfect place for Collins to rest and retreive his voice.",
+        "PotentialDescription": null,
+        "Exits": [
+            {
+                "Direction": 2,
+                "TargetRoomId": "2",
+                "Lockable": false,
+                "IsLocked": false
+            }
+        ],
+        "Inventory": null,
+        "HasSeenDescription": false
+    },
+    {
+        "Id": "5",
+        "Name": "Hollowness",
+        "Description": "You go up to the second floor and get a hollowness",
+        "PotentialDescription": null,
+        "Exits": [
+            {
+                "Direction": 5,
+                "TargetRoomId": "2",
+                "Lockable": false,
+                "IsLocked": false
+            }
+        ],
+        "Inventory": null,
+        "HasSeenDescription": false
+    }
+]

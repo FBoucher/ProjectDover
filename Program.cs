@@ -51,7 +51,9 @@ namespace ProjectDover
                     case Command.COMMAND_SOUTH:
                     case Command.COMMAND_EAST:
                     case Command.COMMAND_WEST:
-                    {
+                    case Command.COMMAND_UP:
+                    case Command.COMMAND_DOWN:
+                        {
                         GameSession.RoomManager.Go(command);
                     }
                         break;
@@ -109,6 +111,7 @@ namespace ProjectDover
         static private GameType Introduction(){
 
             Console.Clear();
+            Console.SetWindowSize(119, 50);
             Console.WriteLine("-=- Welcome to Blind2021 -=-");
 
             Console.Write(File.ReadAllText(@".\medias\blind2021-ascii.txt")); 
@@ -147,6 +150,7 @@ namespace ProjectDover
             while(!validName)
             {
                 Console.WriteLine("How should I call you?");
+                Console.WriteLine("More than 4 charcters, please.");
                 Console.Write("> ");
                 inputString = Console.ReadLine();
 
